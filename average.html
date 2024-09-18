@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Javascript test</title>
+</head>
+<body>
+ 
+    <form id="frm1">
+        <input type= "number" id="howmany" name="howmany">
+        <input type="button" onclick="myFunction()" value="How many numbers to enter?">
+      </form>
+      
+      <div id="numberContainer"></div> 
+      <button onclick="calculateTotal()">Calculate Total</button>
+      <p id="total">Total: </p>
+  
+<script>
+  function myFunction() {
+    document.getElementById('numberContainer').innerHTML = "";
+    
+    let howmany = document.getElementById("howmany").valueAsNumber || 0;
+
+    for (let i = 0; i < howmany; i++) {
+    let number = document.createElement("input");
+    number.type = "number";
+    document.getElementById('numberContainer').appendChild(number);
+}
+
+function calculateTotal(){
+    let total = 0;
+    const inputs = document.querySelectorAll('.numberInput');
+    inputs.forEach(input => {
+        total += input.valueAsNumber || 0;
+    });
+    document.getElementById('total').innerText = `Total: ${total}`;
+  }
+
+}
+
+</script>
+
+</body>
+</html> 
