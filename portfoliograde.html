@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Javascript test</title>
+</head>
+<body>
+ 
+    <form id="frm1">
+        <input type="number" id="mark1">
+        <input type="number" id="mark2">
+        <input type="number" id="mark3">
+        <input type="number" id="mark4">
+        <button type="button" onclick="myFunction()">Calculate Grade</button>
+    </form>
+    
+    <p id="totalMark">Total Mark: </p>
+    <p id="grade">Grade: </p>
+    <p id="nextBand">Marks Needed for Next Band: </p>
+<script>
+  function myFunction() {
+    let mark1 = document.getElementById("mark1").valueAsNumber;
+    let mark2 = document.getElementById("mark2").valueAsNumber;
+    let mark3 = document.getElementById("mark3").valueAsNumber;
+    let mark4 = document.getElementById("mark4").valueAsNumber;
+    
+    let total = mark1 + mark2 + mark3 + mark4;
+    let grade = "";
+    let next = 0;
+  switch (true) {
+  case (total<4):
+    grade = "U";
+    next = 4-total
+    break;
+  case (total>3 && total<14):
+    grade = "G";
+    next = 14-total
+    break;
+  case (total<13 && total<22):
+     grade = "F";
+     next = 21-total
+    break;
+  case (total>21 && total<31):
+    grade = "E";
+    next = 30-total
+    break;
+  case (total>30 && total<41):
+    grade = "D";
+    next = 40-total
+    break;
+  case (total>40 && total<54):
+    grade = "C";
+    next = 53-total
+    break;
+  case (total>53 && total<67):
+    grade = "B";
+    next = 66-total
+    break;
+  case (total>66 && total<80):
+    grade = "A";
+    next = 80-total
+    break;
+  case (total>79):
+    grade = "A*";
+    next = 0
+    break;
+}
+  document.getElementById("total").innerText = "Total Mark: ${total}";
+  document.getElementById("grade").innerText = "Grade: ${grade}";
+  document.getElementById("next").innerText = "Grade: ${next}";
+}
+
+</script>
+</body>
+</html> 
