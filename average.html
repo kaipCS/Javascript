@@ -13,6 +13,9 @@
       <div id="numberContainer"></div> 
       <button onclick="calculateTotal()">Calculate Total</button>
       <p id="total">Total: </p>
+      <button onclick="calculateAverage()">Calculate Average</button>
+      <p id="average">Average: </p>
+
   
 <script>
   function myFunction() {
@@ -23,8 +26,10 @@
     for (let i = 0; i < howmany; i++) {
     let number = document.createElement("input");
     number.type = "number";
+    number.className = "numberInput";
     document.getElementById('numberContainer').appendChild(number);
 }
+  }
 
 function calculateTotal(){
     let total = 0;
@@ -33,9 +38,18 @@ function calculateTotal(){
         total += input.valueAsNumber || 0;
     });
     document.getElementById('total').innerText = `Total: ${total}`;
+    window.totalSum = total;
+  
   }
 
+function calculateAverage(){
+    let howmany = document.getElementById("howmany").valueAsNumber || 0;
+
+    let average = window.totalSum / howmany
+    document.getElementById("average").innerText = `Average: ${average}`;
 }
+
+
 
 </script>
 
