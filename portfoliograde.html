@@ -13,9 +13,10 @@
         <button type="button" onclick="myFunction()">Calculate Grade</button>
     </form>
     
-    <p id="totalMark">Total Mark: </p>
+    <p id="total">Total Mark: </p>
     <p id="grade">Grade: </p>
-    <p id="nextBand">Marks Needed for Next Band: </p>
+    <p id="next">Marks Needed for Next Band: </p>
+
 <script>
   function myFunction() {
     let mark1 = document.getElementById("mark1").valueAsNumber;
@@ -63,10 +64,11 @@
     grade = "A*";
     next = 0
     break;
-}
-  document.getElementById("total") == "Total Mark: ${total}";
-  document.getElementById("grade")== "Grade: ${grade}";
-  document.getElementById("next") == "Grade: ${next}"
+  }
+
+document.getElementById("total").innerText = `Total Mark: ${total}`;
+document.getElementById("grade").innerText = `Grade: ${grade}`;
+document.getElementById("next").innerText = `Grade: ${next}`;
 }
 
 </script>
