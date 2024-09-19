@@ -6,18 +6,34 @@
 <body>
  
     <form id="frm1">
-        <input type="number" id="num1" name="1st number">
-        <input type="number" id="num2" name="2nd number">
+        Enter current balence:
+        <input type="number" id="current">
+        Enter interest rate:
+        <input type="number" id="interestrate" >
+        Enter desired balence:
+        <input type = "number" id="desired" >
         <input type="button" onclick="myFunction()" value="Submit">
+        <p id="output">Balance: </p>
       </form>
       
 <script>
   function myFunction() {
-    var y = document.getElementById("num1").valueAsNumber;
-    var z = document.getElementById("num2").valueAsNumber;
-    x = y+z
-    window.alert(x)
+    var current = document.getElementById("current").valueAsNumber;
+    var interestrate = document.getElementById("interestrate").valueAsNumber;
+    var desired = document.getElementById("desired").valueAsNumber;
+
+    let i = 1
+    while (current < desired) {
+        
+        i+= 1
+    }
+
+
+
+
+
   }
+
 </script>
 
 </body>
