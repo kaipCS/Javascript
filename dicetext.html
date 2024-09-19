@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Javascript test</title>
+</head>
+<body>
+ 
+    <form id="frm1">
+        <input type="button" onclick="myFunction()" value="Roll dice">
+      </form>
+      
+<script>
+  function myFunction() {
+    const nums = ["one", "two", "three", "four", "five", "six"];
+    var random = Math.floor(Math.random() * 7) + 1
+    let dice = nums[random]
+    window.alert(dice)
+  }
+</script>
+
+</body>
+</html> 
