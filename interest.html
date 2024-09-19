@@ -13,23 +13,19 @@
         Enter desired balence:
         <input type = "number" id="desired" >
         <input type="button" onclick="myFunction()" value="Submit">
-        <p id="output">Balance: </p>
       </form>
-      
 <script>
   function myFunction() {
     var current = document.getElementById("current").valueAsNumber;
     var interestrate = document.getElementById("interestrate").valueAsNumber;
     var desired = document.getElementById("desired").valueAsNumber;
 
-    let i = 1
+ let i = 0
     while (current < desired) {
-        
+        windows.alert(current)
+        current = current*interestrate
         i+= 1
     }
-
-
-
 
 
   }
