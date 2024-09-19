@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Javascript test</title>
+</head>
+<body>
+ 
+    <form id="frm1">
+        <input type="number" id="num1" name="1st number">
+        <input type="number" id="num2" name="2nd number">
+        <input type="button" onclick="myFunction()" value="Submit">
+      </form>
+      
+<script>
+  function myFunction() {
+    var y = document.getElementById("num1").valueAsNumber;
+    var z = document.getElementById("num2").valueAsNumber;
+    x = y+z
+    window.alert(x)
+  }
+</script>
+
+</body>
+</html> 
